@@ -6,7 +6,7 @@ const SpotifySection = () => {
           {/* Left: Text Content */}
           <div>
             <h2 className="font-display text-4xl font-light tracking-widest text-foreground md:text-5xl">
-              My Selection
+              Chef's Choice
             </h2>
             <p className="mt-2 font-body text-sm uppercase tracking-widest text-muted-foreground">
               A Personal Playlist
