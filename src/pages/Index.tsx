@@ -4,6 +4,7 @@ import SpotifySection from "@/components/SpotifySection";
 import LyricsSection from "@/components/LyricsSection";
 import AboutSection from "@/components/AboutSection";
 import TourSection from "@/components/TourSection";
+import InstagramSection from "@/components/InstagramSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <LyricsSection />
       <AboutSection />
       <TourSection />
+      <InstagramSection />
       <Footer />
     </main>
   );
