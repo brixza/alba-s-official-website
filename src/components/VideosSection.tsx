@@ -10,12 +10,12 @@ const VideosSection = () => {
     {
       id: 2,
       title: "Music Video 2",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      embedUrl: "https://www.youtube.com/embed/H1boy7T7fFw?si=pcaVN26a6SRqyPz2",
     },
     {
       id: 3,
       title: "Music Video 3",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      embedUrl: "https://www.youtube.com/embed/ArdUlLmXXtU?si=U58ujmhcqd-ns_S4",
     },
   ];
 
