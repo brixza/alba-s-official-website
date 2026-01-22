@@ -23,8 +23,8 @@ const AboutSection = () => {
           </p>
 
           <p className="font-body leading-relaxed text-muted-foreground">
-            With "First Light," Alba delivers her most ambitious work yet—a 
-            meditation on time, memory, and the transformative power of dawn. 
+            With "Chasin' the Sun," Alba delivers her most ambitious work yet—a 
+            meditation on time, memory, and the transformative power of dawn.
             Each track was recorded during the golden hour, capturing the 
             ephemeral beauty of light as it breaks across the horizon.
           </p>
