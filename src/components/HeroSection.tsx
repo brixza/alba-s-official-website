@@ -1,15 +1,18 @@
-import heroImage from "@/assets/hero-alba.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Alba"
+        <video
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-hero" />
