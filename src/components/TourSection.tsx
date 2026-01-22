@@ -20,7 +20,7 @@ const TourSection = () => {
               Tour
             </h2>
             <p className="mt-2 font-body text-sm uppercase tracking-widest text-muted-foreground">
-              First Light World Tour 2025
+              Chasin' the Sun World Tour 2025
             </p>
           </div>
           <Calendar className="h-8 w-8 text-primary" />

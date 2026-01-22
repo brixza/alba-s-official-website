@@ -27,7 +27,7 @@ const MusicSection = () => {
             <div className="glow overflow-hidden rounded-lg">
               <img
                 src={albumCover}
-                alt="First Light - Album Cover"
+                alt="Chasin' the Sun - Album Cover"
                 className="w-full transition-transform duration-500 group-hover:scale-105"
               />
             </div>
@@ -41,7 +41,7 @@ const MusicSection = () => {
           {/* Track List */}
           <div className="flex flex-col justify-center">
             <h3 className="font-display text-3xl italic text-foreground">
-              First Light
+              Chasin' the Sun
             </h3>
             <p className="mt-4 font-body text-sm leading-relaxed text-muted-foreground">
               A journey through the quiet hours before sunrise, where memories blur 

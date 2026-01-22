@@ -188,7 +188,7 @@ const LyricsSection = () => {
             Lyrics
           </h2>
           <p className="mt-2 font-body text-sm uppercase tracking-widest text-muted-foreground">
-            Words from First Light
+            Words from Chasin' the Sun
           </p>
         </div>
 
