@@ -1,4 +1,4 @@
-import albumCover from "@/assets/album-cover.jpg";
+import albumCover from "@/assets/album-cover.png";
 import { Button } from "@/components/ui/button";
 import { Play, ExternalLink } from "lucide-react";
 
