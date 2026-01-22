@@ -1,11 +1,12 @@
 import { Instagram } from "lucide-react";
 import instagram1 from "@/assets/instagram-1.png";
+import instagram2 from "@/assets/instagram-2.png";
 
 const InstagramSection = () => {
   // Placeholder images - replace with your Instagram embed widget or API integration
   const placeholderPosts = [
     { id: 1, image: instagram1 },
-    { id: 2, gradient: "from-secondary/30 to-secondary/50" },
+    { id: 2, image: instagram2 },
     { id: 3, gradient: "from-primary/30 to-secondary/30" },
     { id: 4, gradient: "from-secondary/20 to-primary/30" },
     { id: 5, gradient: "from-primary/40 to-primary/20" },
