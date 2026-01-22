@@ -4,16 +4,16 @@ import instagram2 from "@/assets/instagram-2.png";
 import instagram3 from "@/assets/instagram-3.png";
 import instagram4 from "@/assets/instagram-4.png";
 import instagram5 from "@/assets/instagram-5.png";
+import instagram6 from "@/assets/instagram-6.png";
 
 const InstagramSection = () => {
-  // Placeholder images - replace with your Instagram embed widget or API integration
-  const placeholderPosts = [
+  const posts = [
     { id: 1, image: instagram1 },
     { id: 2, image: instagram2 },
     { id: 3, image: instagram3 },
     { id: 4, image: instagram4 },
     { id: 5, image: instagram5 },
-    { id: 6, gradient: "from-secondary/40 to-secondary/20" },
+    { id: 6, image: instagram6 },
   ];
   return (
     <section id="instagram" className="bg-background py-24">
@@ -28,9 +28,9 @@ const InstagramSection = () => {
           </p>
         </div>
 
-        {/* Placeholder Grid */}
+        {/* Image Grid */}
         <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3">
-          {placeholderPosts.map((post) => (
+          {posts.map((post) => (
             <a
               key={post.id}
               href="https://instagram.com"
@@ -38,18 +38,11 @@ const InstagramSection = () => {
               rel="noopener noreferrer"
               className="group relative aspect-square overflow-hidden rounded-lg"
             >
-              {/* Image or placeholder gradient background */}
-              {post.image ? (
-                <img
-                  src={post.image}
-                  alt="Instagram post"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              ) : (
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${post.gradient}`}
-                />
-              )}
+              <img
+                src={post.image}
+                alt="Instagram post"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
               
               {/* Hover overlay */}
               <div className="absolute inset-0 flex items-center justify-center bg-background/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
