@@ -1,6 +1,6 @@
 import heroVideo from "@/assets/hero-video.mp4";
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
+import { Play, Instagram, Twitter, Youtube, Music2 } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -55,11 +55,20 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-        <div className="h-12 w-6 rounded-full border border-foreground/30 p-1">
-          <div className="h-2 w-1 mx-auto rounded-full bg-primary animate-pulse" />
-        </div>
+      {/* Social Links */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-6">
+        <a href="#" className="text-white transition-opacity hover:opacity-70" aria-label="Instagram">
+          <Instagram className="h-5 w-5" />
+        </a>
+        <a href="#" className="text-white transition-opacity hover:opacity-70" aria-label="Twitter">
+          <Twitter className="h-5 w-5" />
+        </a>
+        <a href="#" className="text-white transition-opacity hover:opacity-70" aria-label="YouTube">
+          <Youtube className="h-5 w-5" />
+        </a>
+        <a href="#" className="text-white transition-opacity hover:opacity-70" aria-label="Spotify">
+          <Music2 className="h-5 w-5" />
+        </a>
       </div>
     </section>
   );
