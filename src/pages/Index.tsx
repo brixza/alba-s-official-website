@@ -14,9 +14,9 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <HeroSection />
       <MusicSection />
+      <VideosSection />
       <SpotifySection />
       <LyricsSection />
-      <VideosSection />
       <AboutSection />
       <TourSection />
       <ShopSection />
