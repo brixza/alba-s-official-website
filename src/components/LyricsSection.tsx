@@ -222,15 +222,15 @@ const LyricsSection = () => {
               </AccordionTrigger>
               <AccordionContent className="pb-0">
                 <div 
-                  className="relative -mx-6 -mb-0 min-h-[400px] overflow-hidden rounded-b-lg"
+                  className="relative -mx-6 -mb-0 overflow-hidden rounded-b-lg"
                   style={{
                     backgroundImage: `url(${songBackgrounds[song.title] || lyricsBgDefault})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center top',
+                    backgroundPosition: 'center',
                   }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-                  <pre className="relative z-10 flex min-h-[400px] items-end whitespace-pre-wrap p-8 pb-10 font-body text-sm leading-relaxed text-foreground">
+                  <div className="absolute inset-0 bg-background/50 backdrop-blur-[2px]" />
+                  <pre className="relative z-10 whitespace-pre-wrap p-8 font-body text-sm leading-relaxed text-foreground/95">
                     {song.lyrics}
                   </pre>
                 </div>
