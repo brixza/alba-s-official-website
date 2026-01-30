@@ -5,7 +5,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Music } from "lucide-react";
-import lyricsBg from "@/assets/lyrics-bg.jpg";
+import lyricsBgDefault from "@/assets/lyrics-bg.jpg";
+import lyricsCriminal from "@/assets/lyrics-criminal.png";
+
+const songBackgrounds: Record<string, string> = {
+  "Criminal": lyricsCriminal,
+};
 
 const songs = [
   {
@@ -219,7 +224,7 @@ const LyricsSection = () => {
                 <div 
                   className="relative -mx-6 -mb-0 overflow-hidden rounded-b-lg"
                   style={{
-                    backgroundImage: `url(${lyricsBg})`,
+                    backgroundImage: `url(${songBackgrounds[song.title] || lyricsBgDefault})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}
