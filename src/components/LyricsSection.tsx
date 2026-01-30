@@ -229,8 +229,8 @@ const LyricsSection = () => {
                     backgroundPosition: 'center',
                   }}
                 >
-                  <div className="absolute inset-0 bg-background/50 backdrop-blur-[2px]" />
-                  <pre className="relative z-10 whitespace-pre-wrap p-8 font-body text-sm leading-relaxed text-foreground/95">
+                  <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
+                  <pre className="relative z-10 whitespace-pre-wrap p-6 font-body text-sm leading-relaxed text-foreground">
                     {song.lyrics}
                   </pre>
                 </div>
