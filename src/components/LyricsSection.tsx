@@ -7,9 +7,11 @@ import {
 import { Music } from "lucide-react";
 import lyricsBgDefault from "@/assets/lyrics-bg.jpg";
 import lyricsCriminal from "@/assets/lyrics-criminal.png";
+import lyricsBleecker from "@/assets/lyrics-bleecker.jpg";
 
 const songBackgrounds: Record<string, string> = {
   "Criminal": lyricsCriminal,
+  "Bleecker": lyricsBleecker,
 };
 
 const songs = [
