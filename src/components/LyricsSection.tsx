@@ -203,9 +203,15 @@ const LyricsSection = () => {
             <AccordionItem
               key={song.title}
               value={song.title}
-              className="rounded-lg border-none bg-secondary/30 px-6 transition-colors hover:bg-secondary/50"
+              className="group rounded-lg border-none px-6 transition-all overflow-hidden relative"
+              style={{
+                backgroundImage: `url(${songBackgrounds[song.title] || lyricsBgDefault})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
             >
-              <AccordionTrigger className="py-5 hover:no-underline">
+              <div className="absolute inset-0 bg-secondary/80 group-data-[state=open]:bg-background/70 group-data-[state=open]:backdrop-blur-sm transition-all" />
+              <AccordionTrigger className="py-5 hover:no-underline relative z-10">
                 <div className="flex items-center gap-4">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-primary">
                     <Music className="h-4 w-4" />
@@ -220,20 +226,10 @@ const LyricsSection = () => {
                   </div>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="pb-0">
-                <div 
-                  className="relative -mx-6 -mb-0 overflow-hidden rounded-b-lg"
-                  style={{
-                    backgroundImage: `url(${songBackgrounds[song.title] || lyricsBgDefault})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                  }}
-                >
-                  <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
-                  <pre className="relative z-10 whitespace-pre-wrap p-6 font-body text-sm leading-relaxed text-foreground">
-                    {song.lyrics}
-                  </pre>
-                </div>
+              <AccordionContent className="pb-0 relative z-10">
+                <pre className="whitespace-pre-wrap p-6 pt-0 font-body text-sm leading-relaxed text-foreground">
+                  {song.lyrics}
+                </pre>
               </AccordionContent>
             </AccordionItem>
           ))}
