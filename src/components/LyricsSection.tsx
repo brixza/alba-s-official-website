@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Music } from "lucide-react";
+import lyricsBg from "@/assets/lyrics-bg.jpg";
 
 const songs = [
   {
@@ -214,10 +215,20 @@ const LyricsSection = () => {
                   </div>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="pb-6">
-                <pre className="whitespace-pre-wrap font-body text-sm leading-relaxed text-muted-foreground">
-                  {song.lyrics}
-                </pre>
+              <AccordionContent className="pb-0">
+                <div 
+                  className="relative -mx-6 -mb-0 overflow-hidden rounded-b-lg"
+                  style={{
+                    backgroundImage: `url(${lyricsBg})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                >
+                  <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
+                  <pre className="relative z-10 whitespace-pre-wrap p-6 font-body text-sm leading-relaxed text-foreground">
+                    {song.lyrics}
+                  </pre>
+                </div>
               </AccordionContent>
             </AccordionItem>
           ))}
