@@ -33,11 +33,14 @@ const HeroSection = () => {
           <a href="#music" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
             Music
           </a>
+          <a href="#videos" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
+            Videos
+          </a>
+          <a href="#lyrics" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
+            Lyrics
+          </a>
           <a href="#about" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
             About
-          </a>
-          <a href="#tour" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
-            Tour
           </a>
         </div>
       </nav>
