@@ -1,6 +1,5 @@
 import heroVideo from "@/assets/hero-video.mp4";
-import { Button } from "@/components/ui/button";
-import { Play, Instagram, Youtube, Music2 } from "lucide-react";
+import { Instagram, Youtube, Music2 } from "lucide-react";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -53,15 +52,6 @@ const HeroSection = () => {
         <p className="animate-fade-in-delay mt-4 font-display text-xl italic text-muted-foreground md:text-2xl">
           Where Darkness Meets the Dawn
         </p>
-        <div className="animate-fade-in-delay-2 mt-12 flex flex-col gap-4 sm:flex-row">
-          <Button variant="hero" size="lg">
-            <Play className="mr-2 h-4 w-4" />
-            Listen Now
-          </Button>
-          <Button variant="heroOutline" size="lg">
-            View Tour Dates
-          </Button>
-        </div>
       </div>
 
       {/* Social Links */}
