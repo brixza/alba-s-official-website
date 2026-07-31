@@ -48,9 +48,6 @@ const VideosSection = () => {
                   />
                 </AspectRatio>
               </div>
-              <h3 className="mt-4 text-center font-body text-sm font-medium text-foreground">
-                {video.title}
-              </h3>
             </div>
           ))}
         </div>
