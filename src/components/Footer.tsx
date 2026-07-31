@@ -6,26 +6,6 @@ const Footer = () => {
           ALBA
         </span>
 
-        {/* Newsletter */}
-        <div className="mt-12">
-          <p className="font-body text-sm text-muted-foreground">
-            Join the mailing list for exclusive updates and early access
-          </p>
-          <form className="mt-4 flex flex-col gap-3 sm:flex-row sm:justify-center">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="rounded-md border border-border bg-secondary px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:w-72"
-            />
-            <button
-              type="submit"
-              className="rounded-md bg-gradient-gold px-6 py-3 font-body text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-
         {/* Copyright */}
         <div className="mt-12 flex flex-col items-center gap-4 border-t border-border pt-8 sm:flex-row sm:justify-between">
           <p className="font-body text-xs text-muted-foreground">
