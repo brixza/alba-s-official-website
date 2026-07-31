@@ -29,17 +29,11 @@ const HeroSection = () => {
           ALBA
         </span>
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#music" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
-            Music
-          </a>
           <a href="#videos" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
             Videos
           </a>
-          <a href="#lyrics" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
-            Lyrics
-          </a>
-          <a href="#about" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
-            About
+          <a href="#socials" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
+            Socials
           </a>
         </div>
       </nav>
