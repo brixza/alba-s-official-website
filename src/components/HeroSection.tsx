@@ -23,20 +23,6 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-hero" />
       </div>
 
-      {/* Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-8 py-6 md:px-16">
-        <span className="font-display text-2xl font-light tracking-widest text-foreground">
-          ALBA
-        </span>
-        <div className="hidden items-center gap-8 md:flex">
-          <a href="#videos" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
-            Videos
-          </a>
-          <a href="#socials" className="font-body text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary">
-            Socials
-          </a>
-        </div>
-      </nav>
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
