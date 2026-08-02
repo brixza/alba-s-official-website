@@ -29,9 +29,6 @@ const HeroSection = () => {
         <h1 className="animate-fade-in font-display text-7xl font-light tracking-[0.3em] text-foreground md:text-9xl">
           ALBA
         </h1>
-        <p className="animate-fade-in-delay mt-4 font-display text-xl italic text-muted-foreground md:text-2xl">
-          Where Darkness Meets the Dawn
-        </p>
       </div>
 
       {/* Social Links */}
