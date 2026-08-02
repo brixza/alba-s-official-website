@@ -55,8 +55,8 @@ export default {
         "charcoal-light": "hsl(var(--charcoal-light))",
       },
       fontFamily: {
-        display: ["Neue Haas Unica Pro", "Helvetica Neue", "Arial", "sans-serif"],
-        body: ["Neue Haas Unica Pro", "Helvetica Neue", "Arial", "sans-serif"],
+        display: ["Neue Haas Unica W06 Black", "Neue Haas Unica Pro", "Helvetica Neue", "Arial", "sans-serif"],
+        body: ["Neue Haas Unica W06 Black", "Neue Haas Unica Pro", "Helvetica Neue", "Arial", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
