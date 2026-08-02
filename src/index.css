@@ -1,5 +1,12 @@
-/* Neue Haas Unica Pro is a premium font; load it via your own webfont kit or Adobe Fonts. */
-/* The font-family below will use it if installed/loaded, otherwise it falls back to system sans-serif. */
+@font-face {
+  font-family: "Neue Haas Unica W1G Black";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://db.onlinewebfonts.com/t/a35e317af3d0caf146f51a36c2706fed.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a35e317af3d0caf146f51a36c2706fed.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/a35e317af3d0caf146f51a36c2706fed.ttf") format("truetype");
+}
 
 @tailwind base;
 @tailwind components;
@@ -49,8 +56,8 @@
     --gradient-gold: linear-gradient(135deg, hsl(38 90% 55%) 0%, hsl(25 80% 50%) 100%);
     --gradient-text: linear-gradient(135deg, hsl(40 30% 92%) 0%, hsl(38 90% 55%) 100%);
 
-    --font-display: 'Neue Haas Unica W06 Black', 'Neue Haas Unica Pro', 'Helvetica Neue', Arial, sans-serif;
-    --font-body: 'Neue Haas Unica W06 Black', 'Neue Haas Unica Pro', 'Helvetica Neue', Arial, sans-serif;
+    --font-display: 'Neue Haas Unica W1G Black', 'Neue Haas Unica W06 Black', 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'Neue Haas Unica W1G Black', 'Neue Haas Unica W06 Black', 'Helvetica Neue', Arial, sans-serif;
 
     --shadow-glow: 0 0 60px hsl(38 90% 55% / 0.15);
     --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
