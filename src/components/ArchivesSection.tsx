@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Plus } from "lucide-react";
+import { Plus, X } from "lucide-react";
 
-import fourWalls from "@/assets/four-walls.png";
 import dancers from "@/assets/dancers.jpg";
 import bleecker from "@/assets/bleecker.jpg";
 import liveScalateatern from "@/assets/scala.jpg";
@@ -38,20 +37,20 @@ import daynnight3 from "@/assets/daynnight/DSCF1414.jpg";
 import daynnight4 from "@/assets/daynnight/DSCF1121.jpg";
 
 const projects = [
-  { title: "Live at Scalateatern", cover: liveScalateatern, gallery: [scala1, scala2, scala3, scala4, scala5, scala6, scala7, scala8] },
-  { title: "Four Walls", cover: fourWalls, gallery: [] },
   { title: "Dancers", cover: dancers, gallery: [dancersBts1, dancersBts2, dancersBts3, dancersBts4, dancersBts5, dancersBts6, dancersBts7, dancersBts8, dancersBts9, dancersBts10] },
   { title: "Bleecker", cover: bleecker, gallery: [bleecker1, bleecker2, bleecker3, bleecker4] },
   { title: "Day N Night", cover: daynnightCover, gallery: [daynnight1, daynnight2, daynnight3, daynnight4] },
+  { title: "Live at Scalateatern", cover: liveScalateatern, gallery: [scala1, scala2, scala3, scala4, scala5, scala6, scala7, scala8] },
 ];
 
 const ArchivesSection = () => {
   const [open, setOpen] = useState<number | null>(null);
+  const [lightbox, setLightbox] = useState<string | null>(null);
 
   return (
     <section id="archives" className="bg-background py-24">
       <div className="mx-auto max-w-5xl px-6">
-        <h2 className="font-display text-4xl font-light tracking-widest text-foreground md:text-5xl">
+        <h2 className="text-center font-display text-4xl font-light tracking-widest text-foreground md:text-5xl">
           Archives
         </h2>
 
@@ -74,11 +73,9 @@ const ArchivesSection = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-hero opacity-70" />
                     <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6">
-                      <div>
-                        <p className="font-display text-3xl font-light text-foreground">
-                          {project.title}
-                        </p>
-                      </div>
+                      <p className="font-display text-3xl font-light text-foreground">
+                        {project.title}
+                      </p>
                       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border/60 bg-background/40 backdrop-blur">
                         <Plus
                           className={`h-4 w-4 text-foreground transition-transform duration-500 ${isOpen ? "rotate-45" : ""}`}
@@ -96,13 +93,19 @@ const ArchivesSection = () => {
                   <div className="min-h-0">
                     <div className="grid grid-cols-2 gap-2 pt-2 md:grid-cols-4">
                       {project.gallery.map((src, g) => (
-                        <img
+                        <button
                           key={g}
-                          src={src}
-                          alt={`Behind the scenes of ${project.title}, image ${g + 1}`}
-                          loading="lazy"
-                          className="aspect-square w-full object-cover transition-transform duration-500 hover:scale-105"
-                        />
+                          type="button"
+                          onClick={() => setLightbox(src)}
+                          className="group/img block aspect-square overflow-hidden"
+                        >
+                          <img
+                            src={src}
+                            alt={`${project.title} image ${g + 1}`}
+                            loading="lazy"
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover/img:scale-105"
+                          />
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -112,6 +115,28 @@ const ArchivesSection = () => {
           })}
         </div>
       </div>
+
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setLightbox(null)}
+            className="absolute right-6 top-6 text-white/70 transition-colors hover:text-white"
+            aria-label="Close"
+          >
+            <X className="h-7 w-7" />
+          </button>
+          <img
+            src={lightbox}
+            alt="Full size"
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };
