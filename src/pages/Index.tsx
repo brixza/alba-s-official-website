@@ -15,6 +15,7 @@ const Index = () => {
       <SpotifySection />
       <SocialsSection />
       <ArchivesSection />
+      <ArchivesSectionAlt />
       <MailingListSection />
       <Footer />
     </main>
