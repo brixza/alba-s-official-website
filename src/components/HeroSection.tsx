@@ -55,7 +55,10 @@ const HeroSection = () => {
           <Youtube className="h-5 w-5" />
         </a>
         <a href="https://open.spotify.com/artist/5MKM7cNYL4SIuIe6q4Qd1p" target="_blank" rel="noopener noreferrer" className="text-white transition-opacity hover:opacity-70" aria-label="Spotify">
-          <Music2 className="h-5 w-5" />
+          <SpotifyIcon className="h-5 w-5" />
+        </a>
+        <a href="https://music.apple.com/us/artist/alba/1593579597" target="_blank" rel="noopener noreferrer" className="text-white transition-opacity hover:opacity-70" aria-label="Apple Music">
+          <AppleMusicIcon className="h-5 w-5" />
         </a>
       </div>
     </section>
