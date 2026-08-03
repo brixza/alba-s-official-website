@@ -48,10 +48,7 @@ const ArchivesSection = () => {
                     <div className="absolute inset-0 bg-gradient-hero opacity-70" />
                     <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6">
                       <div>
-                        <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">
-                          {project.index}
-                        </p>
-                        <p className="mt-2 font-display text-3xl font-light text-foreground">
+                        <p className="font-display text-3xl font-light text-foreground">
                           {project.title}
                         </p>
                       </div>
