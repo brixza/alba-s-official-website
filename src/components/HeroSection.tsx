@@ -33,16 +33,16 @@ const HeroSection = () => {
 
       {/* Social Links */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-6">
-        <a href="#" className="text-white transition-opacity hover:opacity-70" aria-label="Instagram">
+        <a href="https://instagram.com/maybeealba" target="_blank" rel="noopener noreferrer" className="text-white transition-opacity hover:opacity-70" aria-label="Instagram">
           <Instagram className="h-5 w-5" />
         </a>
-        <a href="#" className="text-white transition-opacity hover:opacity-70" aria-label="TikTok">
+        <a href="https://tiktok.com/@maybeealba" target="_blank" rel="noopener noreferrer" className="text-white transition-opacity hover:opacity-70" aria-label="TikTok">
           <TikTokIcon className="h-5 w-5" />
         </a>
-        <a href="#" className="text-white transition-opacity hover:opacity-70" aria-label="YouTube">
+        <a href="https://www.youtube.com/@ALBASHouseParty" target="_blank" rel="noopener noreferrer" className="text-white transition-opacity hover:opacity-70" aria-label="YouTube">
           <Youtube className="h-5 w-5" />
         </a>
-        <a href="#" className="text-white transition-opacity hover:opacity-70" aria-label="Spotify">
+        <a href="https://open.spotify.com/artist/5MKM7cNYL4SIuIe6q4Qd1p" target="_blank" rel="noopener noreferrer" className="text-white transition-opacity hover:opacity-70" aria-label="Spotify">
           <Music2 className="h-5 w-5" />
         </a>
       </div>

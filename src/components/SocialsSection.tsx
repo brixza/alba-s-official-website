@@ -14,12 +14,12 @@ const SocialsSection = () => {
           Socials
         </h2>
         <p className="mt-2 font-body text-sm uppercase tracking-widest text-muted-foreground">
-          @alba
+          @maybeealba
         </p>
 
         <div className="mt-10 flex items-center justify-center gap-10">
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/maybeealba"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -28,7 +28,7 @@ const SocialsSection = () => {
             <Instagram className="h-7 w-7" />
           </a>
           <a
-            href="https://youtube.com"
+            href="https://www.youtube.com/@ALBASHouseParty"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
@@ -37,7 +37,7 @@ const SocialsSection = () => {
             <Youtube className="h-7 w-7" />
           </a>
           <a
-            href="https://tiktok.com"
+            href="https://tiktok.com/@maybeealba"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="TikTok"
