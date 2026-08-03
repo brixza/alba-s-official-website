@@ -1,21 +1,48 @@
 import { useState } from "react";
 import { Plus } from "lucide-react";
+
 import fourWalls from "@/assets/four-walls.png";
 import dancers from "@/assets/dancers.jpg";
 import bleecker from "@/assets/bleecker.jpg";
-import liveScalateatern from "@/assets/live-scalateatern.png.asset.json";
-import bts1 from "@/assets/instagram-2.png";
-import bts2 from "@/assets/instagram-3.png";
-import bts3 from "@/assets/instagram-4.png";
-import bts4 from "@/assets/instagram-5.png";
-import bts5 from "@/assets/instagram-6.png";
-import bts6 from "@/assets/hero-alba.jpg";
+import liveScalateatern from "@/assets/scala.jpg";
+
+import dancersBts1 from "@/assets/dancers/L1030915.jpg";
+import dancersBts2 from "@/assets/dancers/Alba_musikvideo_stills_1.50.1.jpg";
+import dancersBts3 from "@/assets/dancers/Alba_musikvideo_stills_1.55.2.jpg";
+import dancersBts4 from "@/assets/dancers/Alba_musikvideo_stills_1.27.1.jpg";
+import dancersBts5 from "@/assets/dancers/Alba_musikvideo_stills_1.26.1.jpg";
+import dancersBts6 from "@/assets/dancers/Alba_musikvideo_stills_1.22.1.jpg";
+import dancersBts7 from "@/assets/dancers/Alba_musikvideo_stills_1.16.1.jpg";
+import dancersBts8 from "@/assets/dancers/Alba- Sneaks-02.jpg";
+import dancersBts9 from "@/assets/dancers/Alba -61.jpg";
+import dancersBts10 from "@/assets/dancers/Alba_musikvideo_stills_1.1.3.jpg";
+
+import bleecker1 from "@/assets/bleecker/Kopia av Photo03_4.jpg";
+import bleecker2 from "@/assets/bleecker/Kopia av Photo08_9.jpg";
+import bleecker3 from "@/assets/bleecker/Kopia av Kopia av DSCF2006.jpg";
+import bleecker4 from "@/assets/bleecker/Kopia av DSCF2175.jpg";
+
+import scala1 from "@/assets/scala/2-DSC00266.jpg";
+import scala2 from "@/assets/scala/12-DSC01020.jpg";
+import scala3 from "@/assets/scala/10-DSC01013.jpg";
+import scala4 from "@/assets/scala/14-DSC01122.jpg";
+import scala5 from "@/assets/scala/15-DSC01123.jpg";
+import scala6 from "@/assets/scala/8-DSC00756.jpg";
+import scala7 from "@/assets/scala/4-DSC00395.jpg";
+import scala8 from "@/assets/scala/16-DSC01242.jpg";
+
+import daynnightCover from "@/assets/daynnight.jpg";
+import daynnight1 from "@/assets/daynnight/DSCF1005.jpg";
+import daynnight2 from "@/assets/daynnight/DSCF1505.jpg";
+import daynnight3 from "@/assets/daynnight/DSCF1414.jpg";
+import daynnight4 from "@/assets/daynnight/DSCF1121.jpg";
 
 const projects = [
-  { title: "Live at Scalateatern", cover: liveScalateatern.url, gallery: [bts1, bts2, bts3, bts4] },
-  { title: "Four Walls", cover: fourWalls, gallery: [bts1, bts2, bts3, bts4] },
-  { title: "Dancers", cover: dancers, gallery: [bts5, bts6, bts1, bts3] },
-  { title: "Bleecker", cover: bleecker, gallery: [bts2, bts4, bts5, bts6] },
+  { title: "Live at Scalateatern", cover: liveScalateatern, gallery: [scala1, scala2, scala3, scala4, scala5, scala6, scala7, scala8] },
+  { title: "Four Walls", cover: fourWalls, gallery: [] },
+  { title: "Dancers", cover: dancers, gallery: [dancersBts1, dancersBts2, dancersBts3, dancersBts4, dancersBts5, dancersBts6, dancersBts7, dancersBts8, dancersBts9, dancersBts10] },
+  { title: "Bleecker", cover: bleecker, gallery: [bleecker1, bleecker2, bleecker3, bleecker4] },
+  { title: "Day N Night", cover: daynnightCover, gallery: [daynnight1, daynnight2, daynnight3, daynnight4] },
 ];
 
 const ArchivesSection = () => {
