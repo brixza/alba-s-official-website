@@ -3,6 +3,7 @@ import { Plus, ArrowRight } from "lucide-react";
 import fourWalls from "@/assets/four-walls.png";
 import dancers from "@/assets/dancers.jpg";
 import bleecker from "@/assets/bleecker.jpg";
+import liveScalateatern from "@/assets/live-scalateatern.png.asset.json";
 import bts1 from "@/assets/instagram-2.png";
 import bts2 from "@/assets/instagram-3.png";
 import bts3 from "@/assets/instagram-4.png";
@@ -11,9 +12,10 @@ import bts5 from "@/assets/instagram-6.png";
 import bts6 from "@/assets/hero-alba.jpg";
 
 const projects = [
-  { index: "01", title: "Four Walls", year: "2024", cover: fourWalls, gallery: [bts1, bts2, bts3, bts4, bts5, bts6] },
-  { index: "02", title: "Dancers", year: "2023", cover: dancers, gallery: [bts5, bts6, bts1, bts3, bts2, bts4] },
-  { index: "03", title: "Bleecker", year: "2022", cover: bleecker, gallery: [bts2, bts4, bts5, bts6, bts1, bts3] },
+  { title: "Live at Scalateatern", year: "2025", cover: liveScalateatern.url, gallery: [bts1, bts2, bts3, bts4, bts5, bts6] },
+  { title: "Four Walls", year: "2024", cover: fourWalls, gallery: [bts1, bts2, bts3, bts4, bts5, bts6] },
+  { title: "Dancers", year: "2023", cover: dancers, gallery: [bts5, bts6, bts1, bts3, bts2, bts4] },
+  { title: "Bleecker", year: "2022", cover: bleecker, gallery: [bts2, bts4, bts5, bts6, bts1, bts3] },
 ];
 
 const ArchivesSectionAlt = () => {
@@ -47,10 +49,6 @@ const ArchivesSectionAlt = () => {
                   aria-expanded={isOpen}
                   className="group flex w-full items-center gap-4 py-8 text-left md:gap-8"
                 >
-                  <span className="font-body w-12 shrink-0 text-sm text-muted-foreground md:w-16">
-                    {project.index}
-                  </span>
-
                   <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full md:h-20 md:w-20">
                     <img
                       src={project.cover}

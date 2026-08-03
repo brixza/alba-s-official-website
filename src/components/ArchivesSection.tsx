@@ -3,6 +3,7 @@ import { Plus } from "lucide-react";
 import fourWalls from "@/assets/four-walls.png";
 import dancers from "@/assets/dancers.jpg";
 import bleecker from "@/assets/bleecker.jpg";
+import liveScalateatern from "@/assets/live-scalateatern.png.asset.json";
 import bts1 from "@/assets/instagram-2.png";
 import bts2 from "@/assets/instagram-3.png";
 import bts3 from "@/assets/instagram-4.png";
@@ -11,9 +12,10 @@ import bts5 from "@/assets/instagram-6.png";
 import bts6 from "@/assets/hero-alba.jpg";
 
 const projects = [
-  { index: "01", title: "Four Walls", cover: fourWalls, gallery: [bts1, bts2, bts3, bts4] },
-  { index: "02", title: "Dancers", cover: dancers, gallery: [bts5, bts6, bts1, bts3] },
-  { index: "03", title: "Bleecker", cover: bleecker, gallery: [bts2, bts4, bts5, bts6] },
+  { title: "Live at Scalateatern", cover: liveScalateatern.url, gallery: [bts1, bts2, bts3, bts4] },
+  { title: "Four Walls", cover: fourWalls, gallery: [bts1, bts2, bts3, bts4] },
+  { title: "Dancers", cover: dancers, gallery: [bts5, bts6, bts1, bts3] },
+  { title: "Bleecker", cover: bleecker, gallery: [bts2, bts4, bts5, bts6] },
 ];
 
 const ArchivesSection = () => {
@@ -46,10 +48,7 @@ const ArchivesSection = () => {
                     <div className="absolute inset-0 bg-gradient-hero opacity-70" />
                     <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6">
                       <div>
-                        <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">
-                          {project.index}
-                        </p>
-                        <p className="mt-2 font-display text-3xl font-light text-foreground">
+                        <p className="font-display text-3xl font-light text-foreground">
                           {project.title}
                         </p>
                       </div>
