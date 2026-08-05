@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Plus, X } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { Plus, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 import dancers from "@/assets/dancers.jpg";
 import bleecker from "@/assets/bleecker.jpg";
@@ -45,7 +45,31 @@ const projects = [
 
 const ArchivesSection = () => {
   const [open, setOpen] = useState<number | null>(null);
-  const [lightbox, setLightbox] = useState<string | null>(null);
+  const [lightbox, setLightbox] = useState<{ gallery: string[]; index: number } | null>(null);
+
+  const openLightbox = (gallery: string[], index: number) => setLightbox({ gallery, index });
+  const closeLightbox = () => setLightbox(null);
+
+  const prev = useCallback(() => {
+    if (!lightbox) return;
+    setLightbox({ ...lightbox, index: (lightbox.index - 1 + lightbox.gallery.length) % lightbox.gallery.length });
+  }, [lightbox]);
+
+  const next = useCallback(() => {
+    if (!lightbox) return;
+    setLightbox({ ...lightbox, index: (lightbox.index + 1) % lightbox.gallery.length });
+  }, [lightbox]);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "Escape") closeLightbox();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [lightbox, next, prev]);
 
   return (
     <section id="archives" className="bg-background py-24">
@@ -96,7 +120,7 @@ const ArchivesSection = () => {
                         <button
                           key={g}
                           type="button"
-                          onClick={() => setLightbox(src)}
+                          onClick={() => openLightbox(project.gallery, g)}
                           className="group/img block aspect-square overflow-hidden"
                         >
                           <img
@@ -119,22 +143,46 @@ const ArchivesSection = () => {
       {lightbox && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
-          onClick={() => setLightbox(null)}
+          onClick={closeLightbox}
         >
           <button
             type="button"
-            onClick={() => setLightbox(null)}
+            onClick={closeLightbox}
             className="absolute right-6 top-6 text-white/70 transition-colors hover:text-white"
             aria-label="Close"
           >
             <X className="h-7 w-7" />
           </button>
+
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); prev(); }}
+            className="absolute left-4 text-white/70 transition-colors hover:text-white md:left-8"
+            aria-label="Previous"
+          >
+            <ChevronLeft className="h-10 w-10" />
+          </button>
+
           <img
-            src={lightbox}
-            alt="Full size"
-            className="max-h-[90vh] max-w-[90vw] object-contain"
-            onClick={(e) => e.stopPropagation()}
+            key={lightbox.index}
+            src={lightbox.gallery[lightbox.index]}
+            alt={`Image ${lightbox.index + 1}`}
+            className="max-h-[90vh] max-w-[80vw] animate-fade-in object-contain"
+            onClick={(e) => { e.stopPropagation(); next(); }}
           />
+
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); next(); }}
+            className="absolute right-4 text-white/70 transition-colors hover:text-white md:right-8"
+            aria-label="Next"
+          >
+            <ChevronRight className="h-10 w-10" />
+          </button>
+
+          <p className="absolute bottom-6 font-body text-xs tracking-widest text-white/40">
+            {lightbox.index + 1} / {lightbox.gallery.length}
+          </p>
         </div>
       )}
     </section>
